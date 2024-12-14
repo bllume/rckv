@@ -1,0 +1,340 @@
+/* Общие стили */
+.page {
+    overflow: hidden;
+    color: white;
+    user-select: none;
+}
+
+/* Мелкий текст */
+.smallt {
+    position: absolute;
+    margin-top: 115px;
+    font-weight: bold;
+    transition: font-size 0.3s ease;
+    z-index: 5;
+}
+
+/* Контейнер видимости */
+.visible {
+    overflow: hidden;
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    margin-top: 90px;
+    margin-left: 0px;
+    border-radius: 20px;
+    clip-path: inset(0px 0px 85px 0px);
+    z-index: 5;
+}
+
+
+iframe {
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    height: 190%;
+    position: absolute;
+    top: -50px;
+    transform: translateY(11px);
+    border: none;
+}
+
+.visible-2 {
+    overflow: hidden;
+    position: absolute;
+    width: 325px;
+    height: 300px;
+    margin-top: 160px;
+    margin-left: 0px;
+    border-radius: 20px;
+    clip-path: inset(157px 0px 85px 0px);
+    z-index: 5;
+}
+
+.iframe-style-2 {
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: -400px;
+    transform: translateY(11px);
+    border: none;
+}
+
+/* Текстовые стили */
+.text1 {
+    position: absolute;
+    margin-top: 200px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'SF Pro Display', sans-serif;
+    z-index: 5;
+    transition: font-size 0.3s ease;
+}
+
+@keyframes textBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.betting {    
+    position: absolute;
+    margin-top: 410px;
+    margin-bottom: 200px;
+    font-size: 55px;
+    height: 70px;
+    font-weight: bold;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #ffffff;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    animation: textBlink 2s infinite ease-in-out;
+}
+
+
+
+/* Отдельный стиль для SVG, добавленный через псевдоэлемент */
+.betting::before {
+    content: '';
+    position: absolute;
+    top: var(--svg-top, 0);
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 200px;
+    height: 200px;
+    background: url(images/img.svg) center / contain no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+
+/* Изображение-загрузчик */
+.fly {
+    position: absolute;
+    margin-top: 120px;
+    font-size: 600px;
+    background: url(images/loading.svg) center / contain no-repeat;
+    z-index: 5;
+}
+
+.hidden-text {
+    visibility: hidden;
+}
+
+.fly2 {
+    position: absolute;
+    margin-top: 205px;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    z-index: 5;
+    transition: font-size 0.4s ease;
+}
+
+
+.background-low {
+    background-color: rgb(62, 91, 194);
+}
+
+.background-high {
+    background-color: rgb(117, 62, 194);
+}
+
+
+
+.loader2 {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-image: radial-gradient(circle at 0 0, #94a6cd33, #94a6cd00 99%);
+    border-radius: 20px;
+    box-shadow: 23px 0 24px 0 #0003;
+    display: block;
+    position: relative;
+    transition: opacity .3s ease;
+    width: 100%;
+    z-index: 2;
+    width: 350px;
+    height: 540px;
+    position: absolute;
+    margin-top: 30px;
+    
+}
+
+
+
+/* Лоадер */
+.loader {
+    width: 150px;
+    height: 4px;
+    margin: 270px auto -270px;
+    background-color: #151028;
+    border: 1px solid #261c4a;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.loader .bar {
+    width: 0%;
+    height: 100%;
+    background-color: #6b30f9;
+    border-radius: 3px;
+    transition: width 5s ease;
+}
+
+@keyframes loading {
+    0% { width: 100%; }
+    100% { width: 0%; }
+}
+
+/* Фон страницы */
+.page::before {
+    content: "";
+    background: url('images/bg.jpg') center top / cover no-repeat;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Оценка страницы */
+.page__rate-image {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 25px;
+}
+
+.page__rate-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.page__rate-title {
+    color: #ffc300;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+}
+
+.page__rate-subtitle {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Победитель */
+.winner {
+    display: block;
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+/* Удача */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.luck {
+    display: block;
+    width: 130px;
+    margin: 154px 0 0 155px;
+    position: absolute;
+    margin-left: 80px;
+    z-index: 5;
+    animation: fadeInOut 3s infinite ease-in-out;
+}
+
+
+
+
+/* Круг */
+.circle {
+    width: 175px;
+    height: 175px;
+    margin-top: 456px;
+    background-color: black;
+    border: 5px solid #944ef5;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* СВГ */
+.cv {
+    width: 300px;
+    height: 200px;
+    margin: 120px auto -415px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+/* Ракета */
+.rocket {
+    max-width: 300px;
+    margin: 120px auto 0;
+    background: center top / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    transition: all 0.32s ease;
+    z-index: 5;
+}
+
+.rocket_fire {
+    width: 65px;
+    margin-top: 205px;
+    margin-right: 130px;
+    position: absolute;
+    animation: fly 0.2s forwards;
+}
+
+.rocket_boy {
+    width: 65px;
+    margin-top: 150px;
+    margin-right: 50px;
+    display: block;
+    position: absolute;
+    transform: rotate(7deg);
+    transition: all 0.2s ease;
+}
+
+/* Облака */
+.obloko, .obloko2 {
+    width: 300px;
+    margin-top: 110px;
+    position: absolute;
+    transform: rotate(7deg);
+    display: block;
+    animation: fly1 6s linear infinite;
+    z-index: 2;
+}
+
+.obloko { margin-left: 600px; }
+.obloko2 { margin-left: 0; }
+
+@keyframes fly1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-300px, 0); }
+}
