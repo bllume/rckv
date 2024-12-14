@@ -1,0 +1,32 @@
+<svg
+    id="rectangle"
+    width="240"
+    height="240"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 60"
+    aria-label="rectangle-loading"
+    aria-busy="true"
+    role="progressbar"
+>
+    <rect
+        x="5"
+        y="5"
+        width="50"
+        height="30"
+        fill="transparent"
+        stroke="#b172ff"
+        stroke-width="2"
+        style="
+            stroke-dasharray: 40; /* Length of visible part of the stroke */
+            animation: dashAnimation 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+            transform-origin: center;
+        "
+    ></rect>
+    <style>
+        @keyframes dashAnimation {
+            100% {
+                stroke-dashoffset: 160; /* Length equal to perimeter of the rectangle */
+            }
+        }
+    </style>
+</svg>
